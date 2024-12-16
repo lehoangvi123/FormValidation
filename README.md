@@ -52,14 +52,7 @@ To get a local copy of this project up and running, follow these simple steps:
 
 ---
 
-## Example Screenshots
 
-(Optional) Add a few screenshots of your project here to show the result of your work. This can be images of the UI or snippets of the code.
-
-![Screenshot 1](images/screenshot1.png)
-![Screenshot 2](images/screenshot2.png)
-
----
 
 ## How to Contribute
 
@@ -77,12 +70,6 @@ Here are some planned features or ideas for future updates to the project:
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## Contact
 
-For any questions or feedback, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com).
+For any questions or feedback, feel free to reach out to me at [lehoangvi.fullstack.it@gmail.com](mailto:lehoangvi.fullstack.it@gmail.com).
