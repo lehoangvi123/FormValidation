@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="./Form-validation.css">
+</head>
+<body>
+
+    <div class="signup">  
+        <div class="signup__text">
+            <h2 class="signup__title">Member sign up</h2> 
+            <p class="signup__subtitle">To become a member of Jesuit!</p>  
+        </div> 
+
+        <form class="signup__form" action="" id="form-1">  
+
+            <div class="signup__formGroup">
+                <label for="name" class="signup__label">Name:</label> 
+                <br />
+                <input type="text" id="name" name="name" class="signup__input" placeholder="VD: Lê Hoàng Vĩ" required> 
+                <span id="nameError" class="form-message"></span> 
+            </div> 
+
+            <br />  
+            <br /> 
+
+            <div class="signup__formGroup">
+                <label for="email" class="signup__label">Email:</label> 
+                <br />
+                <input type="email" id="email" name="email" class="signup__input" placeholder="VD: duckcute.lehoangvi150803@gmail.com" required>
+                <span id="emailError" class="form-message"></span> 
+            </div> 
+
+            <br />
+            <br /> 
+
+            <div class="signup__formGroup">
+                <label for="password" class="signup__label">Password:</label> 
+                <br />
+                <input type="password" id="password" name="password" class="signup__input" placeholder="VD: 123456" required>
+                <span id="passwordError" class="form-message"></span> 
+            </div> 
+
+            <br />
+            <br /> 
+
+            <div class="signup__formGroup">
+                <label for="confirmPassword" class="signup__label">Confirm Password:</label> 
+                <br />
+                <input type="password" id="confirmPassword" name="confirmPassword" class="signup__input" placeholder="VD: 123456" required>
+                <span id="confirmPasswordError" class="form-message"></span> 
+            </div>  
+        <br /> 
+        <br />  
+        <div class="signup__formGroup">
+            <label for="province" class="form__label">Province/City: </label> 
+            <br /> 
+            <select name="province" id="province" class="form-control"> 
+                <option value="">-- Select Province/City --</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="haiphong">Hải Phòng</option>
+                <option value="tphcm">TPHCM</option>
+            </select>
+            <span id="province" class="form-message"></span> 
+        </div>   
+
+        <br /> 
+        <br /> 
+
+        <div class="signup__formGroup">
+            <label for="avatar" class="signup__label">Image: </label> 
+            <br />
+            <input type="file" id="avatar" name="avatar" class="signup__input" placeholder="VD: 123456" required>
+            <span id="passwordError" class="form-message"></span> 
+        </div> 
+
+
+        <br />
+        <br /> 
+
+
+        <div class="signup__formGroup">
+            <label for="gender" class="signup__label">Gender: </label> 
+            <br /> 
+            <div class="gender_male">
+                <input name="gender" type="checkbox" class="form-control" value="male"> 
+                Male   
+            </div>
+
+            <div class="gender_female">
+                <input name="gender" type="checkbox" class="form-control" value="female">   
+                Female
+            </div> 
+            <div class="gender_other">
+                <input name="gender" type="checkbox" class="form-control" value="female">   
+                Other
+            </div>
+
+
+            <span id="confirmPasswordError" class="form-message"></span> 
+        </div>  
+
+        <br>
+            <button class="signup__button">Sign up</button>
+        </form> 
+        
+        
+    </div>
+    
+    <script src="./Form-validation.js"></script>
+    <script> 
+        Validator({
+    form: '#form-1',
+    errorSelector: '.form-message',
+    rules: [
+        Validator.isRequired('#name', 'Please enter your full name'),
+        Validator.isEmail('#email', 'Please enter a valid email address'),
+        Validator.minLength('#password', 6, 'Password must be at least 6 characters'),
+        Validator.isPasswordMatch('#confirmPassword', function () {
+            return document.querySelector('#password').value;
+        }, 'Passwords do not match'),
+        Validator.isRequired('input[name="gender"]', 'Please select your gender'),
+    ],
+    onSubmit: function (data) {
+        console.log('Form submitted successfully:', data);
+    }
+});
+
+    </script> 
+
+
+</body>
+
+</html>
