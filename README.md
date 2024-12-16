@@ -1,6 +1,6 @@
 # From Validation project
 
-A brief description of your project. Mention what it does, its purpose, and any key features that make it stand out.
+A brief description of my project. Mention what it does, its purpose, and any key features that make it stand out.
 
 ---
 
